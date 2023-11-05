@@ -7,6 +7,7 @@ import { useRef, ElementRef, useState, useEffect } from "react";
 import {
   ChevronsLeft,
   MenuIcon,
+  Plus,
   PlusCircle,
   Search,
   Settings,
@@ -17,6 +18,7 @@ import { cn } from "@/lib/utils";
 import UserItem from "./UserItem";
 import Item from "./Item";
 import { toast } from "sonner";
+import DocumentList from "./document-list";
 
 const Navigation = () => {
   const pathname = usePathname();
@@ -144,7 +146,10 @@ const Navigation = () => {
           <Item label="Settings" icon={Settings} onClick={() => {}} />
           <Item onClick={handleCreate} label="New page" icon={PlusCircle} />
         </div>
-        <div className="mt-4">{/* working for this */}</div>
+        <div className="mt-4">
+          <DocumentList />
+          <Item icon={Plus} onClick={handleCreate} label="Add a page" />
+        </div>
         <div
           onMouseDown={handleMouseDown}
           onClick={resetWidth}
