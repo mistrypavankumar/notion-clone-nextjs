@@ -65,7 +65,7 @@ const TrashBox = () => {
   };
 
   return (
-    <div className="text-sm shadow-lg border-2 rounded-md">
+    <div className="text-sm shadow-lg border-2 rounded-md bg-white">
       <div className="flex items-center gap-x-1 p-2">
         <Search className="h-4 w-4" />
         <Input
